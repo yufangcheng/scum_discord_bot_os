@@ -14,8 +14,8 @@
 
 
 -- Dumping database structure for scumbot_development
-CREATE DATABASE IF NOT EXISTS `scumbot_development` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `scumbot_development`;
+CREATE DATABASE IF NOT EXISTS `scum_shop` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `scum_shop`;
 
 -- Dumping structure for table scumbot_development.announcements
 CREATE TABLE IF NOT EXISTS `announcements` (
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `announcements` (
   `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 -- Dumping structure for table scumbot_development.bounties
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `bounties` (
   `victimSteamId64` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.chats
 CREATE TABLE IF NOT EXISTS `chats` (
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `chats` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   KEY `idx_publishedAt` (`publishedAt`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=18838 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18838 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.drones
 CREATE TABLE IF NOT EXISTS `drones` (
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `drones` (
   `lastSeenAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for event scumbot_development.event_server_restart_6pm
 DELIMITER //
@@ -87,7 +87,7 @@ DELIMITER ;
 -- Dumping structure for table scumbot_development.kills
 CREATE TABLE IF NOT EXISTS `kills` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `killerName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `killerName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `killerInEvent` tinyint(1) NOT NULL DEFAULT '0',
   `killerServerX` decimal(18,9) DEFAULT NULL,
   `killerServerY` decimal(18,9) DEFAULT NULL,
@@ -95,9 +95,9 @@ CREATE TABLE IF NOT EXISTS `kills` (
   `killerClientX` decimal(18,9) DEFAULT NULL,
   `killerClientY` decimal(18,9) DEFAULT NULL,
   `killerClientZ` decimal(18,9) DEFAULT NULL,
-  `killerSteamId64` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `killerSteamId64` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `killerImmortal` tinyint(1) NOT NULL DEFAULT '0',
-  `victimName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `victimName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `victimInEvent` tinyint(1) NOT NULL DEFAULT '0',
   `victimServerX` decimal(18,9) DEFAULT NULL,
   `victimServerY` decimal(18,9) DEFAULT NULL,
@@ -105,10 +105,10 @@ CREATE TABLE IF NOT EXISTS `kills` (
   `victimClientX` decimal(18,9) DEFAULT NULL,
   `victimClientY` decimal(18,9) DEFAULT NULL,
   `victimClientZ` decimal(10,0) DEFAULT NULL,
-  `victimSteamId64` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `weaponName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `weaponDamage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `timeOfDay` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `victimSteamId64` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `weaponName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `weaponDamage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `timeOfDay` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `logTimestamp` datetime DEFAULT NULL,
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `kills` (
   `distance` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3432 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3432 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.orders
 CREATE TABLE IF NOT EXISTS `orders` (
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2838 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2838 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.shop_items
 CREATE TABLE IF NOT EXISTS `shop_items` (
@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `shop_items` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.shop_packages
 CREATE TABLE IF NOT EXISTS `shop_packages` (
@@ -151,13 +151,13 @@ CREATE TABLE IF NOT EXISTS `shop_packages` (
   `price` int NOT NULL DEFAULT '0',
   `category` varchar(255) NOT NULL,
   `color` varchar(255) NOT NULL DEFAULT '#ff5622',
-  `imageUrl` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `imageUrl` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `hidden` tinyint(1) NOT NULL DEFAULT '0',
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   `additionalInfo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.squads
 CREATE TABLE IF NOT EXISTS `squads` (
@@ -166,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `squads` (
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `squadUpdatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `steamId64_discordId` (`steamId64`,`discordId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=376 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=376 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.violations
 CREATE TABLE IF NOT EXISTS `violations` (
@@ -197,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `violations` (
   `fine` int NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping structure for table scumbot_development.weapon_images
 CREATE TABLE IF NOT EXISTS `weapon_images` (
@@ -207,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `weapon_images` (
   `url` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table scumbot_development.weapon_images: ~124 rows (approximately)
 /*!40000 ALTER TABLE `weapon_images` DISABLE KEYS */;
